@@ -3,8 +3,13 @@
   <div>
     {{formGroupList.value | json}}
   </div>
-  <div *ngFor="let form of getList">
+  <form [formGroup]="formGroupList">
+    <div>
+      <input type="text" formControlName="nameParent">
+    </div>
+    <div *ngFor="let form of getList">
       <app-child [formChild]="form"></app-child>
   </div>
+  </form>
   <button (click)="add()">add value group</button>
 </div>

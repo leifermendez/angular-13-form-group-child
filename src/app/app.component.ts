@@ -9,6 +9,7 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
 export class AppComponent implements OnInit {
   public formGroupList = new FormGroup({
     list: new FormArray([]),
+    nameParent:new FormControl('')
   });
 
   ngOnInit(): void {
