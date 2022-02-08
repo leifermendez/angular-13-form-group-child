@@ -1,0 +1,10 @@
+<div>
+  <h1>Formulario ARRAY</h1>
+  <div>
+    {{formGroupList.value | json}}
+  </div>
+  <div *ngFor="let form of getList">
+      <app-child [formChild]="form"></app-child>
+  </div>
+  <button (click)="add()">add value group</button>
+</div>
